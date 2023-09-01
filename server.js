@@ -1,7 +1,7 @@
 const http = require("node:http"); // load the library to create a server
 
 const hostname = "127.0.0.1"; // localhost address
-const port = 3000; // server port
+const port = process.env.PORT || 3000; // Use the provided port or default to 3000
 
 const server = http.createServer((req, res) => {
   // Set CORS headers to allow requests from specified origins
