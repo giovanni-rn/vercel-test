@@ -9,18 +9,18 @@ const server = http.createServer((req, res) => {
   //   "http://127.0.0.1:5500",
   //   "https://oriano-dev.github.io/one-piece-game",
   // ]);
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, DELETE"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  // res.setHeader("Access-Control-Allow-Origin", "*");
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "GET, POST, OPTIONS, PUT, DELETE"
+  // );
+  // res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   // Handle endpoints (routes)
-  if (req.url === "/") {
-    res.writeHead(200, { "Content-Type": "text/plain" }); // add success status code and type for browser
-    return res.end("Yo"); // display simple message on client side
-  } // display simple message in client
+  // if (req.url === "/") {
+  res.writeHead(200, { "Content-Type": "text/plain" }); // add success status code and type for browser
+  return res.end("Yo"); // display simple message on client side
+  //} // display simple message in client
 });
 
 server.listen(port, hostname, () => {
